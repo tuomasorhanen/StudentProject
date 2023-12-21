@@ -120,7 +120,6 @@ class Accordion extends MultiUiComponentBase {
   override Component() {
     return (
       <div className="px-4">
-        <AccordionContainer items={this.items} />
       </div>
     );
   }
