@@ -15,7 +15,7 @@ class PageService {
 
   public async Fetch(slug: string): Promise<Page> {
     const pageData = await client.fetch<Page>(`*[_type == 'page' && slug.current == '${slug}'][0]`, {
-      next: { revalidate: 10 } //TODO: per environment revalidation settings
+      next: { revalidate: 86400 } //TODO: per environment revalidation settings
     });
 
     let page = new Page();
